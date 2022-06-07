@@ -1,0 +1,49 @@
+version: "3.2"
+
+services:
+  backend:
+    build:
+      context: restaurante-back
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./uploads:/usr/src/uploads/
+      - /usr/src/app/node_modules/
+    ports:
+      - "5000:5000"
+    depends_on: 
+      - mongodb
+    networks:
+      - backendnet
+      - frontendnet
+
+  frontend:
+    build:
+      context: restaurante
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    restart: always
+    volumes:
+      - ./uploads:/usr/share/nginx/html/static/images/
+    depends_on:
+      - backend
+    networks:
+      - frontendnet
+      - backendnet
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017-27019:27017-27019"
+    restart: always
+    environment:
+      - AUTH=no
+    volumes:
+      - ./data/db:/data/db
+    networks:
+      - backendnet
+      
+networks:
+  backendnet:
+  frontendnet:    
