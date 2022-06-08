@@ -16,6 +16,11 @@ export default function (state = initialState, action) {
         ...state,
         orders: action.payload,
       };
+    // case ADD_ORDER:
+    //   return {
+    //     ...state,
+    //     orders: [action.payload, ...state.orders],
+    //   };
     default:
       return state;
   }

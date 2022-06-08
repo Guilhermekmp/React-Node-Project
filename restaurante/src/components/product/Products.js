@@ -18,6 +18,8 @@ class Products extends Component {
         <header>Restaurante</header>
         <ProductFeed products={products} />
         <Link to="/orders"> Pedidos </Link>
+        <br></br>
+        <Link to="/products/register"> Cadastrar novo Produto </Link>
       </div>
     );
   }

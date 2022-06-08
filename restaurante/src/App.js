@@ -11,6 +11,7 @@ import Orders from "./components/order/Orders";
 import PrivateRoute from "./components/common/PrivateRoute";
 
 import env from "./environment";
+import ProductsRegister from "./components/product/ProductsRegister";
 
 axios.defaults.baseURL = env.API_URL;
 console.log(`Running at ${env.NAME} with ${env.API_URL}`);
@@ -27,6 +28,7 @@ function App() {
             component={Products}
           ></PrivateRoute>
           <PrivateRoute exact path="/orders" component={Orders}></PrivateRoute>
+          <PrivateRoute exact path="/products/register" component={ProductsRegister}></PrivateRoute>
         </Switch>
       </Router>
     </Provider>

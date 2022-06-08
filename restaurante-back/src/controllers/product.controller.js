@@ -1,8 +1,7 @@
 const Products = require("../models/product.model");
 
 exports.createProduct = (req, res) => {
-  const { name, type, value } = req.body;
-  const { filename: photo } = req.file;
+  const { name, type, value, photo } = req.body;
 
   Products.create({
     name,

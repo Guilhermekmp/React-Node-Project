@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_ORDERS, UPDATE_ORDER_STATUS, DELETE_ORDER } from "./types";
+import { GET_ORDERS, ADD_ORDER, UPDATE_ORDER_STATUS, DELETE_ORDER } from "./types";
 
 export const getOrders = () => (dispatch) => {
   axios
@@ -48,6 +48,24 @@ export const removeOrder = (id) => (dispatch) => {
       dispatch({
         type: DELETE_ORDER,
         payload: err.response.data,
+      });
+    });
+};
+
+
+export const addOrder = id => (dispatch) => {
+  axios
+    .post(`api/v1/orders/${id}`)
+    .then((res) => {
+      dispatch({
+        type: ADD_ORDER,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: ADD_ORDER,
+        payload: err.response.data
       });
     });
 };

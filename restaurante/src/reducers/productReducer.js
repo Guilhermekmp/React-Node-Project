@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, ADD_ORDER } from "../actions/types";
+import { GET_PRODUCTS, ADD_ORDER, ADD_PRODUCTS } from "../actions/types";
 
 const initialState = {
   products: [],
@@ -11,6 +11,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         products: action.payload,
+      };
+    case ADD_PRODUCTS:
+      return {
+        ...state,
+        orders: [action.payload, ...state.orders],
       };
     case ADD_ORDER:
       return {

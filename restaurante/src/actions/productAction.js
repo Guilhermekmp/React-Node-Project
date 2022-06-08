@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_PRODUCTS, ADD_ORDER } from "./types";
+import { GET_PRODUCTS, ADD_ORDER, ADD_PRODUCTS } from "./types";
 
 export const getProducts = () => (dispatch) => {
   axios
@@ -16,6 +16,23 @@ export const getProducts = () => (dispatch) => {
         payload: null,
       })
     );
+};
+
+export const addProduct = (produto) => (dispatch) => {
+  axios
+    .post(`api/v1/products`,produto)
+    .then((res) => {
+      dispatch({
+        type: ADD_PRODUCTS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: ADD_PRODUCTS,
+        payload: err.response.data
+      });
+    });
 };
 
 export const addOrder = id => (dispatch) => {
