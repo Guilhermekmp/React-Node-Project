@@ -14,7 +14,6 @@ route.get(
 route.get("/products/:id", ProductController.getOneProduct);
 route.post(
   "/products",
-  upload.single("photo"),
   ProductController.createProduct
 );
 
