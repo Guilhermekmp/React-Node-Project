@@ -1,16 +1,16 @@
-## Available Scripts
+## Roteiros disponíveis
 
-In the project directory, you can run:
+No directório de projectos, pode correr:
 
 ### `npm run dev`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:4000/api/v1/](http://localhost:4000/api/v1/) to view it in the browser.
+Executa a aplicação no modo de desenvolvimento.<br />
+Aberto [http://localhost:4000/api/v1/](http://localhost:4000/api/v1/) para o visualizar no browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+A página será carregada novamente se fizer edições.<br />
+Verá também quaisquer erros de cotão na consola.
 
 ### `npm run prod build`
 
-Runs the app in the production mode.<br />
-Open [http://localhost:5000/api/v1/](http://localhost:5000/api/v1/) to view it in the browser.
+Executa a aplicação no modo de produção.<br />
+Aberto [http://localhost:5000/api/v1/](http://localhost:5000/api/v1/) para o visualizar no browser.

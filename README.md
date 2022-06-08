@@ -1,26 +1,26 @@
-# PP-Project
-Project for a discipline called Práticas de Programação on University UNIFACISA. Project using React with Redux and NodeJS(Express) and MongoDB.
+# PP-Projecto
+Projecto para uma disciplina chamada Práticas de Programação na Universidade UNIFACISA. Projecto utilizando Reacção com Redux e NodeJS(Express) e MongoDB.
 
-## Requirements
+## Requisitos
 
 * Node
 * Docker
 
-## Installation with Docker-compose
+## Instalação com Docker-compose
 
-* `git clone https://github.com/hanbarfe/Si2-Project.git`
+* `git clone https://github.com/Guilhermekmp/React-Node-Project.git`
 * `docker-compose build`
 * `docker-compose up -d`
 
-## Installation without Docker-compose
+## Instalação sem Docker-compose
 
-* `git clone https://github.com/hanbarfe/Si2-Project.git`
+* `git clone https://github.com/Guilhermekmp/React-Node-Project.git`
 * `cd restaurante-back`
 * `npm install`
 * `cd restaurante`
 * `npm install`
 
-## Running Applications in Development mode
+## Aplicações em modo de desenvolvimento
 
 * `cd restaurante-back`
 * `npm run dev`
@@ -29,7 +29,7 @@ Project for a discipline called Práticas de Programação on University UNIFACI
 
 ## Endpoints
 
-* POST/GET `http://url:port/api/v1/products` -> Receives or create a product
-* GET `http://url:port/api/v1/products/ID` -> Receives a product
-* GET `http://url:port/api/v1/orders`   -> Receives all orders
-* PUT `http://url:port/api/v1/kitchen`  -> Refresh the status of all orders
+* POST/GET `http://url:port/api/v1/products` -> Recebe ou cria um produto
+* GET `http://url:port/api/v1/products/ID` -> Recebe um produto
+* GET `http://url:port/api/v1/orders`   -> Recebe todas as encomendas
+* PUT `http://url:port/api/v1/kitchen`  -> Atualizar o status de todas as encomendas
