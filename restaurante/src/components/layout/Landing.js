@@ -14,10 +14,10 @@ import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "100vh",
+    height: "93.6vh",
   },
   image: {
-    backgroundImage: "url(https://source.unsplash.com/random)",
+    backgroundImage: "url(https://revistamenu.com.br/wp-content/uploads/2021/12/vastosp.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -68,33 +68,48 @@ const Landing = (props) => {
   };
 
   return (
-    <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          {!register ? (
-            <div>
-              <Login></Login>
-              <p className="form-group-has-feedback-cadastro">
-                NÃO POSSUI CADASTRO?
-                <button onClick={(event) => showRegister(event)}>
-                  CLIQUE AQUI
-                </button>
-              </p>
-            </div>
-          ) : (
-            <Register></Register>
-          )}
-        </div>
+    <div>
+      <Grid container className={classes.root}>
+        <CssBaseline />
+        <Grid item xs={false} sm={4} md={7} className={classes.image} />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <div className={classes.paper}>
+            <Avatar className={classes.avatar}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography style={{}} component="h1" variant="h3">
+              Sign in
+            </Typography>
+            {!register ? (
+              <div style={{ width: "80%", display: "flex", flexDirection: "column" }}>
+                <Login></Login>
+                <div style={{ flexDirection: "row", display: "flex", marginTop: 50, alignItems: "center" }}>
+                  <p style={{ color: "#F50057", fontWeight: "bold", fontSize: 12 }}>
+                    NÃO POSSUI CADASTRO?
+                  </p>
+                  <button style={{
+                    backgroundColor: "#F75F95",
+                    border: 0,
+                    borderRadius: 5,
+                    height: 35,
+                    color: "white", 
+                    fontWeight: "bold",
+                    marginLeft: 30,
+                    fontSize: 12,
+                    width: "30%"
+                  }} onClick={(event) => showRegister(event)}>
+                    CLIQUE AQUI
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <Register></Register>
+            )}
+          </div>
+        </Grid>
       </Grid>
-    </Grid>
+    </div >
+
   );
 };
 

@@ -36,12 +36,13 @@ const Login = (props) => {
     <form
       onSubmit={(event) => onSubmit(event)}
       className="login100-form validate-form"
+      style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
     >
       <div
-        className="wrap-input100 validate-input"
-        data-validate="Insira um username válido: Haniel"
+        style={{ marginTop: 10, width: "80%" }}
+        data-validate="Insira um username válido"
       >
-        <span className="label-input100">Username</span>
+        <span className="label-input100">Nome de usuário</span>
         <TextFieldGroup
           placeholder="Username"
           name="Username"
@@ -51,12 +52,12 @@ const Login = (props) => {
         />
       </div>
       <div
-        className="wrap-input100 validate-input"
+        style={{ marginTop: 10, width: "80%" }}
         data-validate="Senha é Necessária"
       >
         <span className="label-input100">Senha</span>
         <TextFieldGroup
-          placeholder="*************"
+          placeholder="***"
           name="password"
           type="password"
           value={password}
@@ -64,12 +65,16 @@ const Login = (props) => {
         />
       </div>
 
-      <div className="container-login100-form-btn">
-        <div className="wrap-login100-form-btn">
-          <div className="login100-form-bgbtn"></div>
-          <button className="login100-form-btn">Entrar</button>
-        </div>
-      </div>
+      <button style={{
+        backgroundColor: "#C30045",
+        color: "white",
+        border: 0,
+        width: "50%",
+        borderRadius: 5,
+        marginTop: 30,
+        height: 30,
+        fontWeight: "bold"
+      }} >Entrar</button>
     </form>
   );
 };

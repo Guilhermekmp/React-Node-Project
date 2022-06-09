@@ -21,7 +21,8 @@ const TextFieldGroup = ({
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
-        className={classnames("form-control form-control-lg", {
+        style={{ width: "100%" }}
+        className={classnames({
           "is-invalid": error
         })}
       />

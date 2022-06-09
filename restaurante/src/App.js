@@ -19,6 +19,9 @@ console.log(`Running at ${env.NAME} with ${env.API_URL}`);
 function App() {
   return (
     <Provider store={store}>
+      <div style={{ backgroundColor: "#C30045", width: "100%", height: 60, paddingTop: 13 }}>
+        <h2 style={{ color: "white", textAlign: "center", margin: 0 }} >Restaurante</h2>
+      </div>
       <Router>
         <Route exact path="/" component={Landing} />
         <Switch>
