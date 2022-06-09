@@ -15,12 +15,38 @@ class Products extends Component {
 
     return (
       <div>
-        <header>Restaurante</header>
-        <ProductFeed products={products} />
-        <Link to="/orders"> Pedidos </Link>
-        <br></br>
-        <Link to="/products/register"> Cadastrar novo Produto </Link>
-      </div>
+        <div style={{
+          display: "flex",
+          backgroundColor: "lightpink",
+          height: 60,
+          alignItems: "center",
+          paddingLeft: 20,
+          paddingRight: 20,
+          marginBottom: 50,
+        }}>
+          <Link style={{
+            textDecoration: "none", marginRight: 50,
+            fontSize: 18,
+            fontWeight: 500
+          }} to="/orders"> <p style={{ margin: 0, color: "white" }}>Pedidos</p> </Link>
+          <Link style={{
+            textDecoration: "none", marginRight: 50,
+            fontSize: 18,
+            fontWeight: 500
+          }} to="/products/register"><p style={{ margin: 0, color: "white" }}> Cadastrar novo Produto</p> </Link>
+
+        </div>
+        <div style={{
+          display: "flex",
+          flexDirection: " column",
+          alignItems: "center"
+        }}>
+          <h1 style={{ color: "lightpink", marginBottom: 90 }}>Produtos</h1>
+          <div>
+            <ProductFeed products={products} />
+          </div>
+        </div >
+      </div >
     );
   }
 }

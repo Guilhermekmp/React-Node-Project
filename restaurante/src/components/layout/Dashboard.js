@@ -15,8 +15,9 @@ import { addOrder } from "../../actions/productAction";
 const styles = (theme) => ({
   root: {
     maxWidth: 345,
-    display: "flex", 
-    float: "left"
+    display: "flex",
+    float: "left",
+    marginLeft: 30
   },
   media: {
     height: 140,
@@ -42,7 +43,7 @@ class Dashboard extends Component {
             title="Product image"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" style={{ textTransform: "capitalize" }}>
               {product.name}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
@@ -54,11 +55,11 @@ class Dashboard extends Component {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary" onClick={this.onSubmit}>
+          <Button size="small" color="primary" onClick={this.onSubmit} style={{ color: "rgb(195, 0, 69)" }}>
             Pedir
           </Button>
         </CardActions>
-      </Card>
+      </Card >
     );
   }
 }
