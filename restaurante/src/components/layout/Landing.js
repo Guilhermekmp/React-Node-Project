@@ -83,16 +83,20 @@ const Landing = (props) => {
             {!register ? (
               <div style={{ width: "80%", display: "flex", flexDirection: "column" }}>
                 <Login></Login>
-                <div style={{ flexDirection: "row", display: "flex", marginTop: 50, alignItems: "center" }}>
+                <div style={{
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  display: "flex", marginTop: 50, alignItems: "center"
+                }}>
                   <p style={{ color: "#F50057", fontWeight: "bold", fontSize: 12 }}>
                     NÃO POSSUI CADASTRO?
                   </p>
                   <button style={{
-                    backgroundColor: "#F75F95",
+                    backgroundColor: "lightpink",
                     border: 0,
                     borderRadius: 5,
                     height: 35,
-                    color: "white", 
+                    color: "white",
                     fontWeight: "bold",
                     marginLeft: 30,
                     fontSize: 12,
